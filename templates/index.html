@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style type="text/css">
+      #firstdiv { background: #0099e5;
+        color: #dbebfa;
+        height:400px;
+      
+    }
+    #firstdiv h1{
+      text-align: center;
+
+    }
+
+    #seconddiv .form-label{ 
+      font-size: 25px;
+      text-align: center;
+    }
+
+    </style>
+    <title>Project Page</title>
+  </head>
+  <body>
+      <div class="container form-control form-control-lg mt-5 " id="firstdiv">
+          <h1 class="mb-4">Spam-Mail Prediction Input Form</h1>
+        <div class="row" id="seconddiv">
+            <Form class="form-control form-control-lg" method="post"  action="http://127.0.0.1:5000">
+              <label for="exampleFormControlTextarea1" class="form-label fw-bold">Input Mail</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" name="mail" id="name" placeholder="Enter your mail"></textarea>
+              <button type="submit" class="btn btn-primary mt-3 ">Predict</button>
+              {% if result %}
+              <h2 class="mt-4 mb-4 text-center" style="color: #01cd74;">The Given Mail is :  {{result}}</h2>
+              {% endif %}
+            </Form>
+        </div>
+      </div>
+  </body>
+</html>
